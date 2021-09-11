@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.9fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "name name"
+    "youtube guide"
+    "youtube cookbook"
+    "shop fifty"
+    "brands brands" 
+    ;
+    gap: 10px;
+}
+.name{
+    background-color: rgb(190, 238, 142);
+    grid-area: name;
+}
+.name-data,
+.youtube-data,
+.brands-data
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+.img img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+}
+.lilly{
+    font-size: 1.5rem;
+}
+.lilly span{
+    background-color:gold;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.4rem;
+    text-transform: capitalize;
+}
+.link{
+    color:rgb(38, 39, 38);
+}
+.youtube{
+    grid-area: youtube;
+}
+.youtube h4{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.box{
+    width: 500px;
+    height: 150px;
+    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+}
+.col-left img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0px 13px;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+.col-right p{
+    margin: 5px 0px;
+    color: white;
+}
+.col-right button{
+    background-color:red;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 4px;
+}
+.guide{
+    grid-area: guide;
+}
+.user,
+.cook,
+.shop,
+.best,
+.band{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.signup,
+.buy,
+.gym,
+.now,
+.shopnow{
+    background-color: rgb(236, 235, 231);
+    padding: 10px 10px;
+    width: 350px;
+    margin-top: 15px;
+    position: relative;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.my{
+    text-transform: lowercase;
+}
+.gym{
+    font-weight: 500;
+}
+.link-icon{
+    position: absolute;
+    right: 20px;
+}
+.cookbook{
+    grid-area: cookbook;
+}
+.cook{
+    text-transform: capitalize;
+}
+.shop{
+    grid-area: shop;
+}
+.shop-data{
+    padding-left:70px ;
+}
+.fifty{
+    grid-area: fifty;
+}
+.sell{
+    text-transform: lowercase;
+}
+.brands{
+    grid-area: brands;
+}
+
+@media (max-width:700px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "name"
+        "guide"
+        "youtube"
+        "cookbook"
+        "shop"
+        "fifty"
+        "brands"
+        ;
+        gap: 40px;
+    }
+    .guide-data,
+    .cookbook-data,
+    .shop-data,
+    .fifty-data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
